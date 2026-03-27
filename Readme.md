@@ -43,6 +43,7 @@ This project moves beyond standard churn prediction to perform a Forensic Audit 
      5.2 The Engineering Breakthrough: Injecting engineered features nearly doubled the raw detection rate to 32%. Credit_Score_Per_Product emerged as the #1 predictive driver (Weight: +3.24).
    
      5.3 Stability Proof (K-Fold): A 5-Fold Cross-Validation yielded a highly stable Mean Weight of 3.2437 ($\sigma = 0.0473$), proving the signal is a "Global Truth."
+     
      5.4 The Balanced Calibration: Applied class_weight='balanced' to shift the decision boundary, successfully pushing final Recall to 74%.
 
 ## 🎯 Strategic Intervention Plan
@@ -58,24 +59,23 @@ This project moves beyond standard churn prediction to perform a Forensic Audit 
 
 ## 🧠 The Math Behind the Machine: Logistic Regression
 
-     Unlike "Black Box" algorithms, Logistic Regression was chosen for its strict mathematical interpretability, allowing us to reverse-engineer the exact drivers of churn.
+      Unlike "Black Box" algorithms, Logistic Regression was chosen for its strict mathematical interpretability, allowing us to reverse-engineer the exact drivers of churn.
 
   ### The Core Equation
 
-     The model calculates the probability $P$ that a customer will churn ($y=1$) given their specific features $\mathbf{X}$, using the Sigmoid Function:
+      The model calculates the probability $P$ that a customer will churn ($y=1$) given their specific features $\mathbf{X}$, using the Sigmoid Function:
       $$P(y=1|\mathbf{X}) = \frac{1}{1 + e^{-(\beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_nX_n)}}$$
   
   
 ### Inner Workings
 
       1. The Linear Combination: The model calculates a raw log-odds score by multiplying each feature ($X_n$) by a learned weight ($\beta$).A positive weight (e.g., Age) pushes the score higher, driving the prediction toward Churn.
-     2. A negative weight (e.g., IsActiveMember) pulls the score lower, indicating stability.The Sigmoid Transformation: This raw score is squashed into a strict probability between 0 and 1.
-     3. The Decision Boundary: By utilizing class_weight='balanced', we mathematically lowered the probability threshold required to flag a "Churner," prioritizing the capture of at-risk revenue over raw precision.
+      2. A negative weight (e.g., IsActiveMember) pulls the score lower, indicating stability.The Sigmoid Transformation: This raw score is squashed into a strict probability between 0 and 1.
+      3. The Decision Boundary: By utilizing class_weight='balanced', we mathematically lowered the probability threshold required to flag a "Churner," prioritizing the capture of at-risk revenue over raw precision.
 
 
-## ⚠️ Limitations & The Way Forward
+## ⚠️ Limitations 
 
-      Limitations
       1. Linearity Constraint: Logistic Regression assumes a linear relationship. It may miss complex, multi-dimensional interactions without manual feature engineering.
 
       2. Precision-Recall Trade-off: To achieve 74% Recall, we accept a Precision of 42% (False Alarms). This is optimal for low-cost outreach but less so for high-cost bonuses.
