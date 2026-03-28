@@ -78,7 +78,7 @@ scaled_input = scaler.transform(input_df)
 prediction_prob = model.predict_proba(scaled_input)[0][1]
 
 # --- 6. RESULTS & INTERVENTION ---
-st.divider()
+st.markdown("---")
 st.header("🔍 Diagnostic Verdict")
 
 if prediction_prob > 0.5:
