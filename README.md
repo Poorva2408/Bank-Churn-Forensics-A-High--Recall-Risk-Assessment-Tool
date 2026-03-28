@@ -1,5 +1,5 @@
 # 🏦 Bank Churn Forensic Audit: A High-Recall Risk Assessment Tool
-🔗 [Live App Link] | 💻 [GitHub Repository]
+🔗 [https://bank-churn-forensics-a-high--recall-risk-assessment-tool-tsomt.streamlit.app/] | 💻 [GitHub Repository]
 
 This project moves beyond standard churn prediction to perform a Forensic Audit of bank customer behavior. By synthesizing raw data into high-impact engineered features, this analysis identifies the "Underutilized Elite"—a segment of high-value customers hiding in plain sight who pose the greatest flight risk.
 
