@@ -9,8 +9,8 @@ st.set_page_config(page_title="Bank Churn Forensic Tool", layout="wide")
 @st.cache_resource # Keeps the model in memory for speed
 def load_assets():
     # Update paths if you put them in a /models folder
-    model = joblib.load('forensic_churn_model.pkl')
-    scaler = joblib.load('churn_scaler.pkl')
+    model = joblib.load('models/forensic_churn_model.pkl')
+    scaler = joblib.load('models/churn_scaler.pkl')
     return model, scaler
 
 model, scaler = load_assets()
