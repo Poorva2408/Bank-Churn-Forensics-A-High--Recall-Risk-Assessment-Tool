@@ -1,4 +1,5 @@
 # 🏦 Bank Churn Forensic Audit: A High-Recall Risk Assessment Tool
+🔗 [Live App Link] | 💻 [GitHub Repository]
 
 This project moves beyond standard churn prediction to perform a Forensic Audit of bank customer behavior. By synthesizing raw data into high-impact engineered features, this analysis identifies the "Underutilized Elite"—a segment of high-value customers hiding in plain sight who pose the greatest flight risk.
 
@@ -45,6 +46,15 @@ This project moves beyond standard churn prediction to perform a Forensic Audit 
      5.3 Stability Proof (K-Fold): A 5-Fold Cross-Validation yielded a highly stable Mean Weight of 3.2437 ($\sigma = 0.0473$), proving the signal is a "Global Truth."
      
      5.4 The Balanced Calibration: Applied class_weight='balanced' to shift the decision boundary, successfully pushing final Recall to 74%.
+
+### 🚀 6. Deployment: The Live Diagnostic Interface
+      To move from theoretical analysis to operational utility, the model was deployed via a Streamlit Cloud Web Application. This allows bank managers to perform real-time "Forensic Drills" on specific customer profiles.
+      
+      6.1 Interactive Simulation: Adjust financial and behavioral sliders (Balance, Credit Score, Product Count) to see the churn probability update instantly.
+
+      6.2 Real-Time Scaling: The app integrates the StandardScaler pipeline to ensure user inputs are normalized against the original 10,000-record training distribution before prediction.
+
+      6.3 Dynamic Decision Support: Depending on the calculated probability, the UI triggers specific "Intervention Cards" (e.g., The Anchor Offer or Concierge Re-engagement) based on the model's highest-weighted drivers.
 
 ## 🎯 Strategic Intervention Plan
 
